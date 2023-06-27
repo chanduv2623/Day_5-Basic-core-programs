@@ -4,28 +4,23 @@
     {
         static void Main(string[] args)
         {
-            int Number, power;
-            int result;
-            Console.WriteLine("\n\n Recursion : Calculate power of any number :\n");
-            Console.WriteLine("------------------------------------------------\n");
+            int i, n; // n is number of terms
+            double s = 0; // sum of series intialized with 0.
 
-            Console.WriteLine(" Input the base  value : ");
-            Number = Convert.ToInt32(Console.ReadLine());
+            Console.Write("\n\n");
+            Console.WriteLine("Calculate the Harmonic Numbers:\n");
+            Console.Write("----------------------------------------------");
+            Console.Write("\n\n");
 
-            Console.WriteLine(" Input the exponent : ");
-            power = Convert.ToInt32(Console.ReadLine());
-
-            result = CalOfPower(Number, power);//called the function CalOfPower
-
-            Console.WriteLine(" The value of {0} to the power of {1} is : {2} \n\n", Number, power, result);
-        }
-
-        public static int CalOfPower(int x, int y)
-        {
-            if (y == 0)
-                return 1;
-            else
-                return x * CalOfPower(x, y - 1);
+            Console.WriteLine("Input the number of terms : ");
+            n = Convert.ToInt32(Console.ReadLine());
+            Console.Write("\n\n");
+            for (i = 1; i <= n; i++) //// it will print 1/i current value of the loop.
+            {
+                Console.Write("1/{0} + ", i);
+                s += 1 / (float)i; // sum is calculated when converting i to s.
+            }
+            Console.WriteLine("\nSum of Series upto {0} terms : {1} \n", n, s);
         }
     }
     
