@@ -4,27 +4,18 @@
     {
         static void Main(string[] args)
         {
-
-            //declare and initialize character variable
-
-            int a = 12, b = 2;
-            int q, r;
-
-            //find the quotient
-
-            q = a / b;
-
-            //find the remainder
-
-            r = a % b;
-
-            // display result
-
-            Console.WriteLine("When " + a + " is divided by " + b + ", quotient is " + q + " and remainder is " + r + ".");
-
-            // wait for user to press any key
-
-            Console.ReadKey();
+            int Number1, Number2, Swaping_Numbers; // Inputs variables;
+            Console.WriteLine("\nInput the First Number : ");
+            Number1 = int.Parse(Console.ReadLine());  // parse converting string to integer;
+            Console.WriteLine("\nInput the Second Number : ");
+            Number2 = int.Parse(Console.ReadLine());
+            Swaping_Numbers = Number1;
+            Number1 = Number2;
+            Number2 = Swaping_Numbers;
+            Console.Write("\nAfter Swapping : ");
+            Console.Write("\nFirst Number : " + Number1);
+            Console.Write("\nSecond Number : " + Number2);
+            Console.Read();
         }
     }
     
