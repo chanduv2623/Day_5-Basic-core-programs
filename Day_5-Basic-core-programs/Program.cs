@@ -4,18 +4,19 @@
     {
         static void Main(string[] args)
         {
-            int Number1, Remainder1;
-            Console.Write("\n\n");
-            Console.WriteLine("Check whether a number is even or odd :\n");
-            Console.WriteLine("---------------------------------------");
-            Console.Write("\n\n");
-            Console.WriteLine("Input an integer : ");
-            Number1 = Convert.ToInt32(Console.ReadLine());
-            Remainder1 = Number1 % 2;
-            if (Remainder1 == 0)
-                Console.WriteLine("{0} is an even integer.\n", Number1);
+            Console.WriteLine("Enter an alphabet:");
+            char i = Convert.ToChar(Console.ReadLine().ToLower()); // convert to lowercase 
+
+            if (i == 'a' || i == 'e' || i == 'i' || i == 'o' || i == 'u')
+            {
+                Console.WriteLine("The alphabet is a vowel.");
+            }
             else
-                Console.WriteLine("{0} is an odd integer.\n", Number1);
+            {
+                Console.WriteLine("The alphabet is a consonant.");
+            }
+
+            Console.ReadLine(); // pause at the end of the program
         }
     }
     
