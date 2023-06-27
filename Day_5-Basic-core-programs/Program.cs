@@ -4,19 +4,31 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter an alphabet:");
-            char i = Convert.ToChar(Console.ReadLine().ToLower()); // convert to lowercase 
+            int Number1, Number2, Number3;
 
-            if (i == 'a' || i == 'e' || i == 'i' || i == 'o' || i == 'u')
+            Console.WriteLine("Enter the first number: ");
+            Number1 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter the second number: ");
+            Number2 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter the third number: ");
+            Number3 = int.Parse(Console.ReadLine());
+
+            if (Number1 > Number2 && Number1 > Number3)
             {
-                Console.WriteLine("The alphabet is a vowel.");
+                Console.WriteLine("The largest number is: " + Number1);
+            }
+            else if (Number2 > Number1 && Number2 > Number3)
+            {
+                Console.WriteLine("The largest number is: " + Number2);
             }
             else
             {
-                Console.WriteLine("The alphabet is a consonant.");
+                Console.WriteLine("The largest number is: " + Number3);
             }
 
-            Console.ReadLine(); // pause at the end of the program
+            Console.ReadKey();
         }
     }
     
